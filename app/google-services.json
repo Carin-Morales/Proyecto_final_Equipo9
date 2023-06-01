@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "479923016454",
+    "firebase_url": "https://proyecto-final-78071-default-rtdb.firebaseio.com",
+    "project_id": "proyecto-final-78071",
+    "storage_bucket": "proyecto-final-78071.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:479923016454:android:d900f73a115ed88d024487",
+        "android_client_info": {
+          "package_name": "com.ugb.proyecto_final"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC4PbmHdfqjeeL0oNCaeU3pYL5RbIvCaGc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

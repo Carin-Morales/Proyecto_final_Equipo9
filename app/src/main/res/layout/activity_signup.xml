@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@drawable/signup"
+    android:background="@drawable/cuenta"
     tools:context=".SignupActivity">
     <LinearLayout
         android:layout_width="match_parent"
@@ -56,8 +56,10 @@
                 android:text="Inscribirse"
                 android:id="@+id/signup_button"
                 android:textSize="18sp"
+                android:textColor="@color/white"
                 android:layout_marginTop="30dp"
-                app:cornerRadius = "30dp"/>
+                app:cornerRadius = "30dp"
+                app:backgroundTint="@color/cel"/>
 
             <TextView
                 android:id="@+id/loginRedirectText"

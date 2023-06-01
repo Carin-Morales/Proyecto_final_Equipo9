@@ -10,6 +10,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.fragment.app.FragmentManager;
 
 import com.google.android.material.navigation.NavigationView;
 
@@ -48,9 +49,12 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new HomeFragment()).commit();
                 break;
 
-            //case R.id.nav_settings:
-               // getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new MarcasFragment()).commit();
-               // break;
+            case R.id.nav_settings:
+                // Agregar o reemplazar el fragmento MarcasFragment
+                FragmentManager fragmentManager = getSupportFragmentManager();
+                MarcasFragment fragment = new MarcasFragment();
+                fragmentManager.beginTransaction().replace(R.id.fragment_container, fragment).commit();
+                break;
 
             case R.id.nav_share:
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new ShareFragment()).commit();

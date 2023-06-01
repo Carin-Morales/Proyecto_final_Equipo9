@@ -29,7 +29,20 @@
             app:iss_title_background="@drawable/gradient" />
 
 
+
+
     </androidx.cardview.widget.CardView>
+
+    <Button
+        android:id="@+id/lista"
+        android:layout_width="175dp"
+        android:layout_height="69dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="11dp"
+        android:layout_marginTop="237dp"
+        android:text="Lista"
+        app:backgroundTint="@color/lavender" />
 
 
 </RelativeLayout>

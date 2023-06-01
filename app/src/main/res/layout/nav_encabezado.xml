@@ -6,7 +6,7 @@
     android:layout_height="199dp"
     android:gravity="bottom"
     android:padding="18dp"
-    android:background="@drawable/fine"
+    android:background="@drawable/headerbkg"
     android:theme="@style/ThemeOverlay.AppCompat.Dark"
     >
 

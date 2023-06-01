@@ -41,7 +41,7 @@ public class SignupActivity extends AppCompatActivity {
                             }
                         }
                         else{
-                            Toast.makeText(SignupActivity.this, "Este correo ya existe! Inicie seccion", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(SignupActivity.this, "Este correo ya existe! ", Toast.LENGTH_SHORT).show();
                         }
                     }else{
                         Toast.makeText(SignupActivity.this, "Contraseña invalida!", Toast.LENGTH_SHORT).show();

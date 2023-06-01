@@ -32,7 +32,7 @@ public class LoginActivity extends AppCompatActivity {
                         Intent intent  = new Intent(getApplicationContext(), MainActivity.class);
                         startActivity(intent);
                     }else{
-                        Toast.makeText(LoginActivity.this, "Credenciales Invalidas", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(LoginActivity.this, "Correo o contraseña incorectos", Toast.LENGTH_SHORT).show();
                     }
                 }
             }

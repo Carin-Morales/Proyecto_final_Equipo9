@@ -2,6 +2,12 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -16,6 +22,19 @@
         <activity
             android:name=".LoginActivity"
             android:exported="false" />
+        <activity
+            android:name=".UpdateActivity"
+            android:exported="false" />
+
+        <activity android:name=".MarcasFragment" />
+
+        <activity android:name=".lista_activity" />
+
+
+        <activity android:name=".UploadActivity" />
+        <activity android:name="com.ugb.proyecto_final.DetailActivity" />
+
+
         <activity
             android:name=".SignupActivity"
             android:exported="false" />

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/login"
+    android:background="@drawable/iniciosesion"
     android:orientation="vertical"
     tools:context=".LoginActivity">
     <ScrollView
@@ -48,7 +48,8 @@
                     android:layout_marginTop="30dp"
                     android:text="Iniciar "
                     android:textSize="18sp"
-                    app:cornerRadius="30dp" />
+                    app:cornerRadius="30dp"
+                    app:backgroundTint="@color/cel"/>
                 <TextView
                     android:id="@+id/signupRedirectText"
                     android:layout_width="wrap_content"
