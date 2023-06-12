@@ -22,6 +22,7 @@ public class HomeFragment extends Fragment {
         View rootView = inflater.inflate(R.layout.fragment_home, container, false);
 
         Button listaButton = rootView.findViewById(R.id.lista);
+
         listaButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -29,6 +30,25 @@ public class HomeFragment extends Fragment {
                 startActivity(intent);
             }
         });
+
+        Button listaButto = rootView.findViewById(R.id.chatt);
+        listaButto.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getActivity(), lista_usuarios.class);
+                startActivity(intent);
+            }
+        });
+
+        Button listaButton1 = rootView.findViewById(R.id.usuario);
+        listaButton1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getActivity(), MainActivity2.class);
+                startActivity(intent);
+            }
+        });
+
 
         ImageSlider imageSlider = rootView.findViewById(R.id.imageSlider);
         ArrayList<SlideModel> slideModels = new ArrayList<>();

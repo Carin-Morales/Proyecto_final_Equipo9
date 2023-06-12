@@ -71,5 +71,8 @@ public class DetailActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+
     }
+
 }

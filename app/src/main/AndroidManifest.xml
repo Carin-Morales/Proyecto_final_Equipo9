@@ -8,6 +8,21 @@
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_SMS" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.WRITE_SMS" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.READ_CALL_LOG" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -24,16 +39,37 @@
             android:exported="false" />
         <activity
             android:name=".UpdateActivity"
+            android:exported="false"
+            android:parentActivityName=".lista_activity"/>
+
+        <activity
+            android:name=".DetailActivity"
+            android:exported="false"
+            android:parentActivityName=".lista_activity"/>
+
+
+        <activity android:name=".MarcasFragment"
+            android:parentActivityName=".MainActivity"/>
+
+        <activity android:name=".lista_activity"
+            android:parentActivityName=".MainActivity"/>
+
+
+        <activity android:name=".UploadActivity"
+            android:parentActivityName=".lista_activity"/>
+
+        <activity android:name=".lista_usuarios"
+            android:parentActivityName=".MainActivity"/>
+
+
+        <activity android:name=".chats"
+            android:exported="false"
+            android:parentActivityName=".lista_usuarios"/>
+
+
+        <activity
+            android:name=".MainActivity2"
             android:exported="false" />
-
-        <activity android:name=".MarcasFragment" />
-
-        <activity android:name=".lista_activity" />
-
-
-        <activity android:name=".UploadActivity" />
-        <activity android:name="com.ugb.proyecto_final.DetailActivity" />
-
 
         <activity
             android:name=".SignupActivity"
@@ -51,6 +87,36 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.ugb.miapp2.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@mipmap/ic_launcher" />
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_color"
+            android:resource="@color/cardview_light_background" />
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <service
+            android:name=".MyFirebaseMessagingService"
+            android:permission="com.google.android.c2dm.permission.SEND"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+            </intent-filter>
+        </service>
     </application>
 
 </manifest>
