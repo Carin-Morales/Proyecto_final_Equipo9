@@ -12,11 +12,16 @@
             android:icon="@drawable/nav_home"
             android:title="Inicio"/>
 
+        <item
+            android:id="@+id/nav_zapatos"
+            android:icon="@drawable/nav_shopping"
+            android:title="zapatos"/>
+
 
         <item
             android:id="@+id/nav_share"
-            android:icon="@drawable/nav_share"
-            android:title="Redes"/>
+            android:icon="@drawable/nav_chat_24"
+            android:title="Chatt"/>
 
         <item
             android:id="@+id/nav_about"
@@ -25,6 +30,27 @@
 
 
     </group>
+
+    <item
+        android:title="agregar">
+        <menu>
+            <item
+                android:id="@+id/nav_usuario"
+                android:icon="@drawable/nav_person"
+                android:title="Agregar Usuario"/>
+
+            <item
+                android:id="@+id/nav_agregar"
+                android:icon="@drawable/nav_circle_24"
+                android:title="Agregar Calzado"/>
+
+
+        </menu>
+
+
+
+    </item>
+
 
   <item
 

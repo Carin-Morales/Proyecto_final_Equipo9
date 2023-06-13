@@ -8,6 +8,7 @@ import android.widget.ListView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -16,13 +17,15 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 import com.google.firebase.messaging.FirebaseMessaging;
 
+
+
 import org.json.JSONArray;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
 
 
-public class lista_usuarios extends Activity {
+public class lista_usuario extends AppCompatActivity {
     ListView ltsUsuarios;
     DatabaseReference databaseReference;
     JSONArray datosJSONArray = new JSONArray();
@@ -32,11 +35,18 @@ public class lista_usuarios extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_lista_usuarios);
+        setContentView(R.layout.activity_lista_usuario);
+
+
+
+
+
         ltsUsuarios = findViewById(R.id.ltsUsuarios);
         mostrarListadoUsuarios();
         mostrarChats();
     }
+
+
 
     void mostrarListadoUsuarios(){
         databaseReference = FirebaseDatabase.getInstance().getReference("usuarios");

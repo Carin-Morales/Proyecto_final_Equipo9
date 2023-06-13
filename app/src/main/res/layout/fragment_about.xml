@@ -1,17 +1,67 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".AboutFragment">
 
-    <!-- TODO: Update blank fragment layout -->
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="About "
-        android:textSize="30sp"
-        android:layout_centerInParent="true"
-        android:textColor="@color/lavender"/>
+        android:text="Acerca de Archery Sneakers"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:layout_marginStart="20dp" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/receipt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp"
+                android:gravity="center"
+                android:inputType="textMultiLine"
+                android:scrollbars="vertical"
+                android:text="Siempre intentando ofrecer lo mejor y fomentando la cercanía con nuestros clientes, ahora con la venta online llegamos a todas vuestras casas y ponemos a vuestra disposición las últimas tendencias en modelos, colores, marcas, etc. Todo lo que necesitáis"
+                android:textColor="#000000"
+                android:textSize="15dp" />
+
+            <TextView
+                android:id="@+id/receipt2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp"
+                android:gravity="center"
+                android:inputType="textMultiLine"
+                android:scrollbars="vertical"
+                android:text="Archery Sneakers.org es una aplicacion gratuitaa y de codigo abierto impulsado por alumnos de la universidad Gerardo Barrios para nuestro proyecto final de semestre.
+                 proporcionamos el enlace en github de nuestro proyecto "
+                android:textSize="15dp"
+                android:textColor="#000000"/>
+
+            <Button
+                android:id="@+id/botongit"
+                android:layout_width="246dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="95dp"
+                android:layout_marginTop="237dp"
+                android:padding="1dp"
+                android:text="GitHub"
+
+                android:textColor="@color/white"
+                app:backgroundTint="@color/git" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
 </FrameLayout>

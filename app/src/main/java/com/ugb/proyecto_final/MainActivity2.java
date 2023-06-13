@@ -13,6 +13,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.FileProvider;
 
 import com.google.android.gms.tasks.Task;
@@ -28,7 +29,7 @@ import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-public class MainActivity2 extends Activity {
+public class MainActivity2 extends AppCompatActivity {
     ImageView imgPhoto;
     Intent takePhotoIntent;
     String urlCompleteImg;
@@ -169,7 +170,7 @@ public class MainActivity2 extends Activity {
         });
     }
     void mostrarListaUsuarios(){
-        Intent intent = new Intent(getApplicationContext(), lista_usuarios.class);
+        Intent intent = new Intent(getApplicationContext(), lista_usuario.class);
         startActivity(intent);
     }
 }

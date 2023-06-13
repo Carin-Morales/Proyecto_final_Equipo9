@@ -65,7 +65,7 @@ public class chats extends Activity {
             tempVal = findViewById(R.id.lblToChats);
             imgTemp = findViewById(R.id.imgAtras);
             imgTemp.setOnClickListener(v -> {
-                Intent intent = new Intent(getApplicationContext(), lista_usuarios.class);
+                Intent intent = new Intent(getApplicationContext(), lista_usuario.class);
                 startActivity(intent);
             });
             Bundle parametros = getIntent().getExtras();

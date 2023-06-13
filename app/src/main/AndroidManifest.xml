@@ -2,12 +2,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
-
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-
     <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
     <uses-permission android:name="android.permission.VIBRATE" />
     <uses-permission android:name="android.permission.WAKE_LOCK" />
@@ -27,50 +25,47 @@
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
-        android:icon="@drawable/lg"
+        android:icon="@mipmap/ic_logo"
         android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_logo"
         android:supportsRtl="true"
         android:theme="@style/Theme.Proyecto_final"
         tools:targetApi="31">
-
-
+        <activity
+            android:name=".MainActivity3"
+            android:exported="false" />
+        <activity
+            android:name=".lista_usuario"
+            android:parentActivityName=".MainActivity"
+            android:exported="false" />
         <activity
             android:name=".LoginActivity"
             android:exported="false" />
         <activity
             android:name=".UpdateActivity"
             android:exported="false"
-            android:parentActivityName=".lista_activity"/>
-
+            android:parentActivityName=".lista_activity" />
         <activity
             android:name=".DetailActivity"
             android:exported="false"
-            android:parentActivityName=".lista_activity"/>
-
-
-        <activity android:name=".MarcasFragment"
-            android:parentActivityName=".MainActivity"/>
-
-        <activity android:name=".lista_activity"
-            android:parentActivityName=".MainActivity"/>
-
-
-        <activity android:name=".UploadActivity"
-            android:parentActivityName=".lista_activity"/>
-
-        <activity android:name=".lista_usuarios"
-            android:parentActivityName=".MainActivity"/>
-
-
-        <activity android:name=".chats"
+            android:parentActivityName=".lista_activity" />
+        <activity
+            android:name=".MarcasFragment"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".lista_activity"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".UploadActivity"
+            android:parentActivityName=".lista_activity" />
+        <activity
+            android:name=".chats"
             android:exported="false"
-            android:parentActivityName=".lista_usuarios"/>
-
-
+            android:parentActivityName=".lista_usuario" />
         <activity
             android:name=".MainActivity2"
+            android:parentActivityName=".MainActivity"
             android:exported="false" />
-
         <activity
             android:name=".SignupActivity"
             android:exported="false" />
@@ -110,8 +105,8 @@
 
         <service
             android:name=".MyFirebaseMessagingService"
-            android:permission="com.google.android.c2dm.permission.SEND"
-            android:exported="true">
+            android:exported="true"
+            android:permission="com.google.android.c2dm.permission.SEND">
             <intent-filter>
                 <action android:name="com.google.firebase.MESSAGING_EVENT" />
                 <action android:name="com.google.android.c2dm.intent.RECEIVE" />
