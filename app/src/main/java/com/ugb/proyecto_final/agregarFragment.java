@@ -18,7 +18,7 @@ public class agregarFragment extends Fragment {
         // No es necesario inflar ningún layout, ya que no se va a mostrar en esta vista
 
         // Iniciar la actividad lista_usuarios
-        Intent intent = new Intent(getActivity(), UpdateActivity.class);
+        Intent intent = new Intent(getActivity(), MainActivity3.class);
         startActivity(intent);
 
         // Devolver null ya que no se va a mostrar ninguna vista en este fragmento

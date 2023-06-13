@@ -24,25 +24,28 @@
             android:title="Chatt"/>
 
         <item
-            android:id="@+id/nav_about"
-            android:icon="@drawable/nav_about"
-            android:title="Acerca de nosotros"/>
+            android:id="@+id/nav_redes"
+            android:icon="@drawable/social"
+            android:title="Redes Sociales"/>
+
+
 
 
     </group>
 
     <item
-        android:title="agregar">
+        android:title="">
         <menu>
             <item
                 android:id="@+id/nav_usuario"
                 android:icon="@drawable/nav_person"
                 android:title="Agregar Usuario"/>
-
             <item
-                android:id="@+id/nav_agregar"
-                android:icon="@drawable/nav_circle_24"
-                android:title="Agregar Calzado"/>
+                android:id="@+id/nav_about"
+                android:icon="@drawable/nav_about"
+                android:title="Acerca de nosotros"/>
+
+
 
 
         </menu>

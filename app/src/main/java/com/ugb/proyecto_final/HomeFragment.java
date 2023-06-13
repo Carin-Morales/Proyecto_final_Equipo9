@@ -1,12 +1,15 @@
 package com.ugb.proyecto_final;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 
+import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
 
 import com.denzcoskun.imageslider.ImageSlider;
@@ -17,13 +20,20 @@ import java.util.ArrayList;
 
 public class HomeFragment extends Fragment {
 
+
+    CardView imagesCard;
+    CardView docChat;
+    CardView videoCard;
+
+    CardView sensor;
+
+    @SuppressLint("MissingInflatedId")
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View rootView = inflater.inflate(R.layout.fragment_home, container, false);
 
-        Button listaButton = rootView.findViewById(R.id.lista);
-
-        listaButton.setOnClickListener(new View.OnClickListener() {
+        imagesCard = rootView.findViewById(R.id.imageCard);
+        imagesCard.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getActivity(), lista_activity.class);
@@ -31,8 +41,8 @@ public class HomeFragment extends Fragment {
             }
         });
 
-        Button listaButto = rootView.findViewById(R.id.chatt);
-        listaButto.setOnClickListener(new View.OnClickListener() {
+        docChat = rootView.findViewById(R.id.docChat);
+        docChat.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getActivity(), lista_usuario.class);
@@ -40,14 +50,18 @@ public class HomeFragment extends Fragment {
             }
         });
 
-        Button listaButton1 = rootView.findViewById(R.id.usuario);
-        listaButton1.setOnClickListener(new View.OnClickListener() {
+        sensor = rootView.findViewById(R.id.sensor);
+        sensor.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getActivity(), MainActivity2.class);
+                Intent intent = new Intent(getActivity(), MainActivity3.class);
                 startActivity(intent);
             }
         });
+
+
+
+
 
 
         ImageSlider imageSlider = rootView.findViewById(R.id.imageSlider);

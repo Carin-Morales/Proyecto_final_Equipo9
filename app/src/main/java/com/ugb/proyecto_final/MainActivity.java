@@ -70,12 +70,14 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new Fragmentperson()).commit();
                 break;
 
-            case R.id.nav_agregar:
-                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new agregarFragment()).commit();
+            case R.id.nav_redes:
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new RedesFragment()).commit();
                 break;
 
+
+
             case R.id.nav_logout:
-                Toast.makeText(this, "Cerrando sesión...", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "Seccion Cerrada...", Toast.LENGTH_SHORT).show();
                 // Borrar datos de sesión (si es necesario)
 
                 // Finalizar todas las actividades y cerrar la aplicación
